@@ -6,6 +6,7 @@
 
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 using namespace std;
 
 int main()
@@ -22,12 +23,12 @@ int main()
 
 	payment = rate * pow(1 + rate, numbp) / (pow(1 + rate, numbp) - 1) * loan;
 
-	cout << "Loan amount: $" << loan << "\n";
-	cout << "Monthly interest rate: " << rate << "%" << "\n";
-	cout << "Number of payments: " << numbp << "\n";
-	cout << "Monthly payment: $" << payment << "\n";
-	cout << "Amount paid back: $" << payment * numbp << "\n";
-	cout << "Interest paid: $" << (payment * numbp) - loan << "\n";
+	cout << "Loan amount: " << setw(12) << "$" << setw(9) << loan << "\n";
+	cout << "Monthly interest rate: " << setw(10) << rate << "%" << "\n";
+	cout << "Number of payments: " << setw(14) << numbp << "\n";
+	cout << "Monthly payment: " << setw(8) << "$" << setw(9) << setprecision(5) << payment << "\n";
+	cout << "Amount paid back: " << setw(7) << "$" << setw(9) << setprecision(7) << (payment * numbp) << "\n";
+	cout << "Interest paid: " << setw(10) << "$" << setw(9) << setprecision(6) << (payment * numbp) - loan << "\n";
 }
 
 
