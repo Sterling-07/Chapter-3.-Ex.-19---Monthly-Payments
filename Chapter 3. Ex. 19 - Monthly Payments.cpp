@@ -24,7 +24,7 @@ int main()
 	payment = rate * pow(1 + rate, numbp) / (pow(1 + rate, numbp) - 1) * loan;
 
 	cout << "Loan amount: " << setw(12) << "$" << setw(9) << loan << "\n";
-	cout << "Monthly interest rate: " << setw(10) << rate << "%" << "\n";
+	cout << "Monthly interest rate: " << setw(10) << rate * 100 << "%" << "\n";
 	cout << "Number of payments: " << setw(14) << numbp << "\n";
 	cout << "Monthly payment: " << setw(8) << "$" << setw(9) << setprecision(5) << payment << "\n";
 	cout << "Amount paid back: " << setw(7) << "$" << setw(9) << setprecision(7) << (payment * numbp) << "\n";
