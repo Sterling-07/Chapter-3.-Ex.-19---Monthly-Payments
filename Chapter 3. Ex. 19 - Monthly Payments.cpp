@@ -11,9 +11,11 @@ using namespace std;
 
 int main()
 {
+	//Create necessary variables
 	double rate, numbp, loan;
 	double payment;
 
+	//Ask user for required loan information
 	cout << "Please enter the monthly interest rate of the payment in decimal form: ";
 	cin >> rate;
 	cout << "Please enter the number of payments for the loan: ";
@@ -21,9 +23,11 @@ int main()
 	cout << "Please enter the amount of the loan: $";
 	cin >> loan;
 
+	//Equation used to calculate the monthly payment
 	payment = rate * pow(1 + rate, numbp) / (pow(1 + rate, numbp) - 1) * loan;
 
-	cout << "Loan amount: " << setw(12) << "$" << setw(9) << loan << setprecision(7) << "\n";
+	//Calculate and display the loan payment report
+	cout << "Loan amount: " << setw(12) << "$" << setw(9) << loan << "\n";
 	cout << "Monthly interest rate: " << setw(10) << rate * 100 << "%" << "\n";
 	cout << "Number of payments: " << setw(14) << numbp << "\n";
 	cout << "Monthly payment: " << setw(8) << "$" << setw(9) << setprecision(5) << payment << "\n";
